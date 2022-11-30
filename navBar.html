@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drop  down menu</title>
+        <style>
+            body{
+                margin: 0%;
+            }
+            header h1{
+                margin: 0%;
+                padding: 20px;
+                text-align: right;
+                background-color: red;
+            }
+            .navigate{
+                position: static;
+                top: 0%;
+            }
+            .menu{
+                margin: 0%;
+                background-color: rgb(128, 122, 122);
+            }
+            .menu li{
+                padding: 10px;
+                display: inline-block;            
+            }
+            .menu li:hover{
+                background-color: black;
+            }
+            .menu li:nth-child(2):hover #Dropdown2, .menu li:nth-child(3):hover #Dropdown3{
+                display: block;
+            }
+            .menu li a {
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+            }
+            #Dropdown2, #Dropdown3{
+                position: absolute;
+                padding: 10px;
+                width: auto;
+                display: none;
+                background-color: whitesmoke;
+            }
+            #Dropdown2 li, #Dropdown3 li{
+                display: block;
+            }
+            #Dropdown2 li a, #Dropdown3 li a{
+                font-size: 18px;
+                color: steelblue;
+            }
+            #Dropdown2 li:hover, #Dropdown3 li:hover{
+                 background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+            <header><h1>Demo Of Dropdown</h1></header>
+            <nav class="navigate">
+                <ul  class="menu">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a>
+                        <ul id="Dropdown2">
+                            <li><a >DD_Link_1</a></li>
+                            <li><a >DD_Link_2</a></li>
+                            <li><a >DD_Link_3</a></li>
+                        </ul>    
+                    </li>      
+                    
+                    <li><a href="#">Link 3</a>
+                        <ul id="Dropdown3">
+                        <li><a >DD_Link_1</a></li>
+                        <li><a >DD_Link_2</a></li>
+                        <li><a >DD_Link_3</a></li>
+                        <li><a >DD_Link_4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </body>
+</html>
